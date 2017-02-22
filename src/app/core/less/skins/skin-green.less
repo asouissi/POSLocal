@@ -1,0 +1,17 @@
+/*
+ * Skin: Green
+ * -----------
+ */
+
+.skin-green {
+
+  @green-color1: rgb(40, 128, 49);
+  @green-color2: rgb(255, 201, 17);
+
+  .common-skin-style(@green-color1, @green-color2, @use-header-separator: true);
+
+  .common-skin-chart-colors( @green-color1, rgb(110, 170, 40), rgb(181, 230, 29), #26B0A6, #00665F);
+
+  .common-skin-buttons(@primary: @green-color1, @success: @green-color1);
+}
+

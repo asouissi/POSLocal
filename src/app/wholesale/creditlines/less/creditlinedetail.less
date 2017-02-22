@@ -1,0 +1,132 @@
+.box-action-container {
+  position: relative;
+  .asset-creation-btn {
+    cursor: pointer;
+    z-index: 2;
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+
+    .icon-circle {
+      width: 45px;
+      height: 45px;
+      font-size: 23px;
+      line-height: 45px;
+    }
+
+  }
+
+  .btn-icon span {
+    top: 20px;
+  }
+
+  .asset-creation-btn.first {
+    right: 65px;
+  }
+}
+
+.assets-errors{
+  max-height: 300px;
+  overflow-y: auto;
+
+  p {
+    color: @red;
+  }
+}
+
+.dl-container{
+  a {
+    font-size: 28px;
+    margin-left: 5px;
+  }
+
+  span {
+    vertical-align: super;
+  }
+}
+
+.creditline-detail-content {
+
+
+  .creditlinedetail {
+    min-height: 565px;
+  }
+
+  .box {
+    position: relative;
+
+    canvas {
+      display: block;
+      margin: auto;
+      width: 90% !important;
+      //height: auto !important;
+    }
+
+    .loading-griddle {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      transition: all 0.6s ease-in-out;
+
+      & + .box-body {
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    .griddle {
+      height:100%;
+      opacity: 1;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &.load {
+      .loading-griddle {
+        opacity: 1;
+      }
+
+      .griddle {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.phase-container{
+  top: -30px;
+  position: absolute;
+  right: 10px;
+}
+
+.import-table {
+
+  th, td {
+   // width: 100px;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(122)  {
+      width: 100px;
+    }
+
+    &:nth-child(6) {
+      width: 90px;
+    }
+  }
+
+  td {
+    &:nth-child(5){
+      text-align: right;
+    }
+  }
+}

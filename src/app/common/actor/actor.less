@@ -1,0 +1,100 @@
+.sectionTab {
+  padding-top: 40px;
+}
+
+.address-tab {
+  padding-bottom: 6px;
+  margin-top: -40px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.actor-creation-form {
+  > button {
+    margin-right: 5px;
+  }
+}
+
+.actors-search-popup {
+  .modal-footer {
+    display: none
+  }
+}
+
+.actor-search-content {
+  .actors-custom-row {
+    .flex-col {
+      width: 33%;
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+    text-align: center;
+  }
+
+  .griddle-body {
+
+    .cell-actcode {
+      width: 120px;
+    }
+
+    .cell-actlibcourt {
+      width: 20%;
+    }
+
+    .cell-actnom {
+      width: 20%;
+    }
+
+    .cell-acttype {
+      width: 20%;
+    }
+
+    .cell-adrtaxarea {
+      width: 20%;
+    }
+
+    .cell-address {
+      width: 200px;
+    }
+  }
+
+  position: relative;
+
+  .actor-creation-btn {
+    cursor: pointer;
+
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+
+    @media (max-width: @screen-xs-max) {
+      right: 80px;
+    }
+
+    .icon-circle {
+      width: 45px;
+      height: 45px;
+      font-size: 23px;
+      line-height: 45px;
+    }
+  }
+}
+
+.actor-creation-form {
+  .btn {
+    // float: right;
+    margin-left: 5px;
+  }
+}
+
+.multiline-display {
+  word-spacing: 100vw;
+}
+

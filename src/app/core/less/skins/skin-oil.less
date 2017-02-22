@@ -1,0 +1,29 @@
+/*
+ * Skin: Oil
+ * -----------
+ */
+
+.skin-oil {
+
+  //primary colors
+  @p_grey: #4C5356;
+  @p_petrol: #004666;
+
+  //secondary colors
+  @s_petrol_light: #C6DFE7;
+  @s_blue_dark: #006384;
+  @s_blue_light: #80B0C8;
+  @s_green: #95A844;
+  @s_green_light: #C2CCA6;
+  @s_red_dark: #5F1939;
+  @s_red: #A21E4D;
+  @s_orange_dark: #D8AA00;
+  @s_sand: #F6E5BC;
+  @s_silver: #A8ADB3;
+
+  .common-skin-style(@p_petrol, @s_blue_dark, @use-header-separator: true);
+
+  .common-skin-chart-colors(@s_blue_dark, @s_blue_light, @s_orange_dark, @s_green, @s_red_dark);//common chart colors
+
+  .common-skin-buttons(@danger: @p_petrol);
+}

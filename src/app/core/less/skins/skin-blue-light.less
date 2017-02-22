@@ -1,0 +1,54 @@
+/*
+ * Skin: blue-light
+ * -----------
+ * thinked for MB
+ */
+
+.skin-blue-light {
+
+  //primary colors
+  @p_blue_1: #0326c9;
+  @p_blue_2: #21276e;
+  @p_blue_3: #013761;
+  @p_red_1: #ae171a;
+  @p_red_2: #da1f28;
+  @p_grey_1: #acacac;
+  @p_grey_2: #eeeeee;
+
+  //secondary colors
+  @s_blue: #0232ae;
+  @s_cyan: #13a1ad;
+  @s_green: #0dd387;
+  @s_orange: #ed793a;
+  @s_purple: #ca2aa5;
+  @s_yellow: #fed62c;
+
+  .common-skin-style(@p_blue_1, @p_red_1, @use-header-separator: true);
+
+  //.common-skin-chart-colors( @p_blue_1, rgb(86, 133, 200), rgb(173, 216, 230), #26B0A6, #00665F);
+  .common-skin-chart-colors( @p_blue_1, @p_blue_2, @p_blue_3, @p_red_1, @p_red_2, @p_grey_1, @p_grey_2);
+
+  .common-skin-buttons(@primary: @s_blue, @success: @s_green, @info: @s_cyan, @warning: @s_orange, @danger: @p_red_2);
+
+  //specific style
+
+  font-family: museo-sans, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+
+  .btn {
+    border-radius: 47px;
+    min-height: 34px;
+  }
+
+  .input-group .btn {
+    border-radius: 0;
+  }
+
+  .main-sidebar{
+    background-color: @p_blue_3;
+    .treeview-menu{
+      background-color: lighten(@p_blue_3, 5%) !important;
+    }
+  }
+}

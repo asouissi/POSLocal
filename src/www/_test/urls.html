@@ -1,0 +1,232 @@
+<head>
+<base id='base' href="https://front.cassiopae.com/FrontV4FODEMO451/" target="_blank">
+</head>
+
+<table border=1>
+<td>
+<script type="text/javascript">
+var urls = [
+	"https://front.cassiopae.com/FrontV4FODEMO451/",
+	"http://front.cassiopae.com/FrontV4FODEMO454/",
+	"https://front.cassiopae.com/FrontV4AVINNO/",
+	"http://localhost:8080/FrontV4/",
+	"http://172.29.248.176:8490/CassiopaeBODEMO451/",
+	"http://back.cassiopae.com/CassiopaeBODEMO453/",
+	"http://localhost:8080/Cassiopae/",
+
+
+];
+for (i = 0; i < urls.length; i++) {
+	document.write ('<input id="R1" type="radio" name="gender" ' + (i==0?'checked ':'') + 'onclick="document.getElementById(\'base\').href=\'' + urls[i] + '\';">' + urls[i] + '<br>');
+}
+</script>
+</td>
+</table>
+
+<td>
+	<br >FRONT OFFICE WEB SERVICES <br />
+</td>
+
+<br>
+ tpgcode: &nbsp;<a href='RestServices/getdefaultfinancingcompany'>RestServices/getdefaultfinancingcompany</a>
+<br>
+
+<br>
+<a href='RestServices/actors?actorid=A00200651'>RestServices/actors?actorid=A00200651</a>
+<br>
+<a href='RestServices/actors?actlibcourt=DUJARDIN%'>RestServices/actors?actlibcourt=DUJARDIN%</a>
+<br>
+<a href='RestServices/actors?actsiret=DJ%'>RestServices/actors?actsiret=DJ%</a>
+<br>
+<a href='RestServices/actors?actorid=A00200651'>RestServices/actors?actorid=A00200651</a>
+<br>
+<a href='RestServices/actors?actrole=ASSUR'>RestServices/actors?actrole=ASSUR</a>
+<br>
+<a href='RestServices//actors?actroles=ASSUR,CLIENT'>RestServices//actors?actroles=ASSUR,CLIENT</a>
+<br>
+
+
+
+<br>
+<a href='RestServices/deals'>RestServices/deals</a>
+<br>
+<br>
+<a href='RestServices/deal/75860'>RestServices/deal/75860</a> &nbsp;&nbsp;&nbsp;&nbsp;   <a href='RestServices/deal/332450'>RestServices/deal/332450</a>
+<br>
+<a href='RestServices/deal?actid=1&taccode=CBM&tpgcode=06'>RestServices/deal?actid=1&taccode=CBM&tpgcode=06</a> (<a href='RestServices/deal/init?actid=1&taccode=CBM&tpgcode=06'>OLD: RestServices/deal/init?actid=1&taccode=CBM&tpgcode=06</a>)
+<br>
+
+<br>
+<a href='RestServices/getlisttask'>RestServices/getlisttask</a>
+<br>
+<a href='RestServices/task/131914'>RestServices/task/131914</a>
+<br>
+<a href='RestServices/deal/54312/timeline'>RestServices/deal/54312/timeline</a>OLD: <a href='RestServices/gettimeline?dosid=54312'>RestServices/gettimeline?dosid=54312</a>
+<br>
+<a href='RestServices/deal/54312/timeline'>RestServices/deal/54312/timeline</a>OLD: <a href='RestServices/gettimeline?dosid=54312'>RestServices/gettimeline?dosid=54312</a>
+<br>
+
+<br>
+<a href='RestServices/getlistevent?dosid=228548'>RestServices/getlistevent</a>
+<br>
+
+<br>
+Scales:&nbsp;<a href='RestServices/referencetable?table=lanpricingcriteria&taccode=LOCFIN&tpgcode=04&pfiinvestissement=0.0&devcode=EUR'>RestServices/referencetable?table=lanpricingcriteria&taccode=LOCFIN&tpgcode=04&pfiinvestissement=0.0&devcode=EUR</a>
+<br>
+Financial Products:&nbsp;<a href='RestServices/referencetable?table=tprofilgestion'>RestServices/referencetable?table=tprofilgestion</a>
+<br>
+Financial Products:&nbsp;<a href='RestServices/referencetable?table=tprofilgestion&tpgflagfacility=1'>RestServices/referencetable?table=tprofilgestion&tpgflagfacility=1</a>
+<br>
+Financial Products:&nbsp;<a href='RestServices/referencetable?table=tprofilgestion&tpgcodeparent=FL'>RestServices/referencetable?table=tprofilgestion&tpgcodeparent=FL</a>
+<br>
+Customer types:&nbsp;<a href='RestServices/referencetable?table=lantusparam&tusnom=CLIENTFAMILY'>RestServices/referencetable?table=lantusparam&tusnom=CLIENTFAMILY</a>
+<br>
+Role:&nbsp;<a href='RestServices/referencetable?table=lanrole'> RestServices/referencetable?table=lanrole</a>
+<br>
+
+TTRPARAM:&nbsp;<a href='RestServices/referencetable?table=lanttrparam&ttrnom=TYPETAUA'> RestServices/referencetable?table=lanttrparam&ttrnom=TYPETAUA</a>
+<br>
+
+<br>
+
+Country List (LANPAYS):&nbsp;<a href='RestServices/referencetable?table=pays'> RestServices/referencetable?table=pays</a>
+<br>
+<br>
+
+Zip code List (CODEPOSTAL):&nbsp;<a href='RestServices/referencetable?table=codepostal&paycode=GB&postcode='> RestServices/referencetable?table=codepostal&paycode=GB&postcode=</a>
+<br>
+
+<br>
+Makes/brands:&nbsp;<a href='RestServices/referencetable?table=lanmake'>RestServices/referencetable?table=lanmake</a>
+<br>
+Models:&nbsp;<a href='RestServices/referencetable?table=lanmakmodel&makid=375&lancode=EN'>RestServices/referencetable?table=lanmakmodel&makid=375&lancode=EN</a>
+<br>
+Finish:&nbsp;<a href='RestServices/referencetable?table=lanmakmodtrimlevel&mmocode=PASSATVART&lancode=EN'>RestServices/referencetable?table=lanmakmodtrimlevel&mmocode=PASSATVART&lancode=EN</a>
+<br>
+Variants:&nbsp;<a href='RestServices/referencetable?table=LANVARIANT&makid=375&mmocode=PASSATVART&mmtcode=UNUSED'>RestServices/referencetable?table=LANVARIANT&makid=375&mmocode=PASSATVART&mmtcode=UNUSED</a>
+<br>
+Variant info: &nbsp;<a href='RestServices/variant/11488'>RestServices/variant/11488</a>
+<br>
+Variant info: &nbsp;<a href='RestServices/variant/11488'>RestServices/variant/12001</a>
+<br>
+Variant info: &nbsp;<a href='RestServices/variant/11488'>RestServices/variant/12002</a>
+<br>
+
+Variant image as byte: &nbsp;<a href='RestServices/variant/image/3159'>RestServices/variant/image/3159</a>
+<br>
+
+
+
+
+<br>
+Makes/brands:&nbsp;<a href='RestServices/referencetable?table=lanmake'>RestServices/referencetable?table=lanmake</a>
+<br>
+Models:&nbsp;<a href='RestServices/referencetable?table=lanmakmodel&makid=375&lancode=EN'>RestServices/referencetable?table=lanmakmodel&makid=375&lancode=EN</a>
+<br>
+Finish:&nbsp;<a href='RestServices/referencetable?table=lanmakmodtrimlevel&mmocode=TOUAREG&lancode=EN'>RestServices/referencetable?table=lanmakmodtrimlevel&mmocode=TOUAREG&lancode=EN</a>
+<br>
+Variants:&nbsp;<a href='RestServices/referencetable?table=LANVARIANT&makid=375&mmocode=PASSATVART&mmtcode=UNUSED'>RestServices/referencetable?table=LANVARIANT&makid=375&mmocode=PASSATVART&mmtcode=UNUSED</a>
+<br>
+<a href='RestServices/variant/11488'>RestServices/variant/11488</a>
+<br>
+
+
+<br>
+???:&nbsp;<a href='RestServices/referencetable?table=lanjalon'>RestServices/referencetable?table=lanjalon</a>
+<br>
+???:&nbsp;<a href='RestServices/referencetable?table=lanphase'>RestServices/referencetable?table=lanphase</a>
+<br>
+
+<br>
+???:&nbsp;<a href='RestServices/referencetable?table=lanjalon'>RestServices/referencetable?table=lanjalon</a>
+<br>
+???:&nbsp;<a href='RestServices/referencetable?table=lanphase'>RestServices/referencetable?table=lanphase</a>
+<br>
+
+<br>
+<a href='RestServices/userconfiguration'>RestServices/userconfiguration</a>
+<br>
+
+<br>
+Dashboard
+<br>
+<a href='RestServices/dashboards'>RestServices/dashboards</a>
+<br>
+<a href='RestServices/dashboard/MAIN'>RestServices/dashboard/MAIN</a>
+<br>
+<a href='RestServices/dashboard/MAIN'>RestServices/dashboard/0</a>
+<br>
+<a href='RestServices/chart/DEALINPROGRESS'>RestServices/chart/DEALINPROGRESS</a>
+<br>
+<a href='RestServices/chart/SALESPERMONTH'>RestServices/chart/SALESPERMONTH</a>
+<br>
+<a href='RestServices/chart/UNITSPERMONTH'>RestServices/chart/UNITSPERMONTH</a>
+<br>
+<a href='RestServices/chart/SALESANDUNITSPERMONTH'>RestServices/chart/SALESANDUNITSPERMONTH</a>
+<br>
+<a href='RestServices/chart/COMMISSIONPERMONTH'>RestServices/chart/COMMISSIONPERMONTH</a>
+<br>
+<a href='RestServices/chart/KPIDEALINPROGRESS'>RestServices/chart/KPIDEALINPROGRESS</a>
+<br>
+<a href='RestServices/chart/SQLERROR'>RestServices/chart/SQLERROR</a>
+<br>
+<a href='RestServices/chart/HTMLTESTPARAMS&params=hello&amp;extparams=world'>RestServices/chart/HTMLTESTPARAMS&amp;params=hello&amp;extparams=world</a>
+<br>
+<a href='RestServices/chart/HTMLTESTPARAMS&params=[{"key": "XXX", value: "Xxx"},{"key": "YYY", value: "Yyy"}]&extparams=world'>RestServices/chart/HTMLTESTPARAMS&amp;params=[{"key": "XXX", value: "Xxx"},{"key": "YYY", value: "Yyy"}]&amp;extparams=world</a>
+<br>
+
+
+
+<br>
+RestServices/dealapplyscaleandcomputeschedule
+<br>
+RestServices/dealcomputeschedule
+<br>
+RestServices/dealcomputepayment
+<br>
+???TODO: RestServices/dealcomputerv ???
+
+<br /> <br />Master facility draw
+<br />
+<a href='RestServices/deal/75859/undrawnassets'>RestServices/deal/{id}/undrawnassets (only undrawn as (null, dpmordre))</a>
+<br />
+<a href='RestServices/deal/75859/assetstodraw'>RestServices/deal/{id}/assetstodraw (only undrawn as (dpmordre, varlibelle))</a>
+<br />
+<a href='RestServices/deal/75859/drawnassets'>RestServices/deal/{id}/drawnassets (all the MF assets drawn and undrawn)</a>
+
+
+<br /> <br /> Time line
+<br />
+<a href='RestServices/globaltimeline'>RestServices/globaltimeline</a>
+<br />
+<a href='RestServices/globaltimeline?since=1470071542'>RestServices/globaltimeline?since=1470071542</a>
+<br />
+<a href='RestServices/deal/75976/timeline'>RestServices/deal/75976/timeline</a> <br />
+
+<br >Attachments WEB SERVICES <br />
+Get Documents:  <a href='RestServices/deal/76128/documents'>RestServices/deal/76128/documents</a> <br />
+
+<br >BACK OFFICE WEB SERVICES <br /><br />
+Contract list:  <a href='RestServices/contracts?maxlines=10'>RestServices/contracts?maxlines=10</a> <br />
+Credit lines list: <a href='RestServices/creditlines?maxline=10'>RestServices/creditlines?maxline=10</a><br />
+Contract document list : <a href='RestServices/creditlinedetail/37002/documents'>RestServices/creditlinedetail/37002/documents</a><br />
+Contract document server path : <a href='RestServices/docserverpath'>RestServices/docserverpath</a><br />
+
+<br>Userconfiguration<br>
+Userconfiguration: <a href='RestServices/userconfiguration'>RestServices/userconfiguration</a><br />
+
+<br>Dashboards<br>
+Dashboards: <a href='RestServices//dashboards'>RestServices//dashboards</a><br />
+Dashboards Main: <a href='RestServices/dashboard/MAIN'>RestServices/dashboard/MAIN</a><br />
+
+
+<br>Reference table back<br>
+Reference table lannap: <a href='RestServices/referencetable?table=lannap&&dosid=36900'>RestServices/referencetable?table=lannap&&dosid=36900</a><br />
+Reference table lanassetcategory: <a href='RestServices/referencetable?table=lanassetcategory&&dosid=36900'>RestServices/referencetable?table=lanassetcategory&&dosid=36900</a><br />
+Reference table creditline: <a href='RestServices/referencetable?table=creditline'>RestServices/referencetable?table=creditline</a><br />
+Reference table financialscale: <a href='RestServices/referencetable?table=financialscale&dosid=36900'>RestServices/referencetable?table=financialscale&dosid=36900</a><br />
+Reference table lanmake: <a href='RestServices/referencetable?table=lanmake'>RestServices/referencetable?table=lanmake</a><br />
+Reference table lanmakmodel: <a href='RestServices/referencetable?table=lanmakmodel&makid=376'>RestServices/referencetable?table=lanmakmodel&makid=376</a><br />
+Reference table lanmakmodtrimlevel: <a href='RestServices/referencetable?table=lanmakmodtrimlevel&makid=376&mmocode=MiTo'>RestServices/referencetable?table=lanmakmodtrimlevel&makid=376&mmocode=MiTo</a><br />
+Reference table landocument: <a href='RestServices/referencetable?table=landocument&doccontexte=wholesale'>RestServices/referencetable?table=landocument&doccontexte=wholesale</a><br />
+

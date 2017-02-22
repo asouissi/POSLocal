@@ -1,0 +1,37 @@
+[{
+  "code": "5_4",
+  "label": "EURO Fixed rate 4 years"
+}, {
+  "code": "5_6",
+  "label": "EURO Fixed rate 10 years"
+}, {
+  "code": "5_1",
+  "label": "EURO Fixed rate 1 year"
+}, {
+  "code": "5_2",
+  "label": "EURO Fixed rate 2 years"
+}, {
+  "code": "5_3",
+  "label": "EURO Fixed rate 3 years"
+}, {
+  "code": "5_5",
+  "label": "EURO Fixed rate 5 years"
+}, {
+  "code": "5_7",
+  "label": "EURO Floating rate 1 year"
+}, {
+  "code": "5_8",
+  "label": "EURO Floating rate 2 years"
+}, {
+  "code": "5_12",
+  "label": "EURO Floating rate 10 years"
+}, {
+  "code": "5_9",
+  "label": "EURO Floating rate 3 years"
+}, {
+  "code": "5_10",
+  "label": "EURO Floating rate 4 years"
+}, {
+  "code": "5_11",
+  "label": "EURO Floating rate 5 years"
+}]

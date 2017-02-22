@@ -1,0 +1,268 @@
+/*
+ * Page: Login & Register
+ * ----------------------
+ */
+
+/* TEMPLATE CASS */
+
+body,
+.wrapper {
+  height: 100%;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.content-login {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: table;
+  position: relative;
+  z-index: 5;
+
+  > div:first-child {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 10;
+
+    .center-login {
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+      position: relative;
+      top: -10px;
+      
+      > img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        margin-bottom: 50px;
+        opacity: 0;
+        animation: topToBottom 0.6s ease-in-out forwards;
+      }
+
+      form {
+        width: 100%;
+        background: #fff;
+        padding: 10% 20%;
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 5px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        opacity: 0;
+        animation: bottomToTop 0.6s ease-in-out forwards;
+
+        .input-text-login {
+
+          .form-control {
+            padding: 0;
+          }
+          position: relative;
+          width: 100%;
+          height: 50px;
+          margin-bottom: 35px;
+
+          & + .input-text-login {
+            margin-bottom: 25px;
+          }
+
+          input[type=email],
+          input[type=password],
+          input[type=text] {
+            border: none;
+            background: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 45px;
+            outline: none;
+          }
+
+          label {
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            font-family: 'Roboto';
+            color: #989898;
+            font-size: 20px;
+            font-weight: 300;
+            transition: all 0.4s ease-in-out;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+          }
+
+          &::before {
+            background: #d7d7d7;
+          }
+
+          &::after {
+            background: #3b8dbc;
+            max-width: 0;
+            transition: max-width 0.4s ease-in-out;
+          }
+
+          &.focused {
+            &::after {
+              max-width: 100%;
+            }
+
+            label {
+              font-size: 15px;
+              transform: translateY(-30px);
+            }
+          }
+          .help-block {
+            position: relative;
+            bottom: -50px;
+          }
+        }
+
+        .indic-error-login {
+          opacity: 0;
+          max-height: 0;
+          transition: all 0.4s ease-in-out;
+          margin-bottom: 25px;
+
+          p {
+            margin: 0;
+            color: #DD4B39;
+          }
+        }
+
+        .align-right {
+          text-align: right;
+        }
+
+        .input-submit-login {
+          position: relative;
+
+          button {
+            width: 100%;
+            display: block;
+            height: 55px;
+            color: #fff;
+            background: #3b8dbc;
+            border: none;
+            position: relative;
+            font-size: 18px;
+            outline: none;
+            z-index: 1;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              background: #6CA9CC;
+            }
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: #307299;
+            z-index: 5;
+          }
+        }
+
+        &.error {
+          .indic-error-login {
+            max-height: 50px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ANIM APPEAR */
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+     transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+/* TEMPLATE ADMIN LTE */
+
+.login-logo,
+.register-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 300;
+  a {
+    color: #444;
+  }
+}
+
+.login-page,
+.register-page {
+  background: @gray;
+}
+
+.login-box,
+.register-box {
+  width: 360px;
+  margin: 7% auto;
+  @media (max-width: @screen-sm) {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+.login-box-body,
+.register-box-body {
+  background: #fff;
+  padding: 20px;
+  border-top: 0;
+  color: #666;
+  .form-control-feedback {
+    color: #777;
+  }
+}
+.login-box-msg,
+.register-box-msg {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+.social-auth-links {
+  margin: 10px 0;
+}

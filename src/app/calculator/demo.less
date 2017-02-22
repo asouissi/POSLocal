@@ -1,0 +1,176 @@
+.content-demo {
+  background: url("./cassiopae-earth.png") no-repeat 0 0 fixed;
+  background-size: 100%;
+  //height: 100%;
+  padding-top: 10px;
+  padding-bottom: 60px;
+
+  .login-link {
+    float: right;
+    margin-right: 20px;
+    .fa {
+      font-size: 20px;
+    }
+  }
+
+  .bloc-title, .bloc-calc {
+    position: relative;
+  }
+
+  .bloc-title {
+    margin-top: 20px;
+    height: 490px;
+    @media (max-width: @screen-sm-max) {
+      height: 300px;
+    }
+
+  }
+
+  .bloc-calc {
+    padding: 5px 15px;
+
+    border-radius: 5px;
+    background: #fff;
+    border: 1px #A2A7BB solid;
+
+    margin: 0 10%;
+    height: auto;
+
+    @media (max-width: @screen-sm-max) {
+      margin: 0 10px;
+    }
+  }
+
+  .bloc1, .bloc2, .bloc3 {
+    position: absolute;
+    border: 1px #A2A7BB solid;
+    border-radius: 5px;
+    //    background-image: linear-gradient(#A2A7BB, #ccc , #fff);
+    background: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1C2253;
+
+    > h3 {
+      font-weight: inherit;
+      font-size: 26px;
+    }
+
+  }
+
+  .bloc1 {
+    top: 200px;
+    left: 35px;
+
+    @media (max-width: @screen-sm-max) {
+      top: 100px;
+      left: 10px;
+    }
+
+  }
+
+  .bloc2 {
+    > h3 {
+      margin-bottom: 20px;
+    }
+    top: 250px;
+    left: 35px;
+    width: 500px;
+    padding-bottom: 10px;
+
+    @media (max-width: @screen-sm-max) {
+      top: 150px;
+      left: 10px;
+      width: 411px;
+      font-size: 16px;
+    }
+  }
+
+  .bloc3 {
+    @media (max-width: @screen-sm-max) {
+        top: 95px;
+        left: 310px;
+      padding: 5px 20px;
+    }
+
+    top: 195px;
+    left: 410px;
+    padding: 5px 40px;
+    background-image: linear-gradient(#d74738, #c5230e);
+    color: #fff;
+  }
+
+}
+
+.calculator {
+  padding-bottom: 20px;
+
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;
+
+  .input-group, .form-control, .input-group-addon {
+    border-color: #1C2253;
+    color: #1C2253;
+
+  }
+
+  .term {
+    .input-group-addon{
+      border-radius: 0 5px 5px 0;
+    }
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 900;
+  }
+
+  &-summary {
+
+    .summary-row {
+      margin-top: 20px;
+      padding-top: 20px;
+      font-size: 16px;
+      border-top: 1px dotted #ccc;
+
+      :last-child {
+        float: right;
+        font-weight: bold;
+      }
+
+    }
+  }
+
+  &-field {
+
+    .integer-entry {
+      border-radius: 5px 0 0 5px;
+    }
+
+    padding-top: 3px;
+    border-radius: 5px;
+
+    > input {
+      border-radius: 0 5px 5px 0;
+    }
+
+    > .input-group-addon {
+      border-radius: 5px 0 0 5px;
+    }
+  }
+
+  &-slider {
+    padding-left: 0;
+  }
+}
+

@@ -1,0 +1,62 @@
+/*
+ * Skin: Green-107
+ * -----------
+ */
+
+.skin-green-107 {
+
+  @green-color1: rgb(0, 122, 67);
+  @green-color2: rgb(0, 159, 103);
+
+  .common-skin-style(@green-color1, @green-color2, @use-header-separator: true, @bg-body: transparent);
+
+  .common-skin-chart-colors(@green-color1, rgb(110, 170, 40), rgb(181, 230, 29), #26B0A6, #00665F);
+
+  .common-skin-buttons(@primary: @green-color1, @success: @green-color1);
+
+  .rangeslider-horizontal {
+    border-radius: 0;
+    .rangeslider__handle {
+      border-radius: 0;
+      background-color: @green-color1;
+      &::after {
+        display: none;
+      }
+    }
+    .rangeslider__fill {
+      background-color: @green-color2;
+      border-radius: 0;
+    }
+  }
+  .rangeslider .rangeslider__handle {
+    border: 0;
+  }
+  .btn {
+    border-radius: 0;
+  }
+
+  .calculator {
+    .calculator-summary {
+      background: linear-gradient(to right, @green-color1, @green-color2);
+      color: white;
+      padding-bottom: 20px;
+    }
+    .summary-row {
+      text-align: center;
+      > span {
+        &:first-of-type {
+          display: block;
+        }
+        &:nth-child(2) {
+          float: none;
+        }
+      }
+    }
+    .calculator-field {
+      input, span.input-group-addon {
+        border-radius: 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,162 @@
+.solver-container {
+
+  .column-left {
+//    min-width: 260px;
+  }
+
+  .solver-slider {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .control-label {
+      display: block;
+
+      .right-title {
+        float: right;
+      }
+    }
+
+    .rc-slider {
+
+      .rc-slider-step {
+        display: none;
+      }
+
+      .rc-slider-mark {
+        display: none;
+      }
+      .rc-slider-handle {
+        margin-top: -8px;
+        margin-left: -8px;
+        width: 20px;
+        height: 20px;
+        border-width: 6px;
+      }
+    }
+    .rc-slider-disabled {
+
+      background-color: transparent;
+
+      .rc-slider-handle {
+        border-color: #e9e9e9;
+      }
+    }
+
+    @media (min-resolution: 100dpi) {
+
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .rc-slider {
+        height: 30px;
+        padding: 10px 0 5px 0;
+
+        .rc-slider-rail {
+          height: 6px
+        }
+
+        .rc-slider-handle {
+          margin-top: -15px;
+          margin-left: -15px;
+          width: 35px;
+          height: 35px;
+          border-width: 12px;
+        }
+        .rc-slider-track {
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  .quotesInfos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .quotesInfos-loading,
+  .quotesInfos-criteria {
+    color: #ccc;
+    padding: 40px;
+    font-size: 20px;
+
+    LABEL {
+      .fa {
+        padding-right: 20px;
+        font-size: 40px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .quotes-car-list {
+    animation: solver-slide-left 300ms ease-in-out;
+
+    @media (min-width: 768px) {
+      @keyframes solver-slide-left {
+        0% {
+          transform: translateX(60px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      @keyframes solver-slide-left {
+        0% {
+          transform: translateY(60px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .quotes-car-list-exit {
+    animation: solver-slide-right 300ms ease-in-out;
+    visibility: hidden;
+
+    @media (min-width: 768px) {
+      @keyframes solver-slide-right {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+        100% {
+          transform: translateX(60px);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      @keyframes solver-slide-right {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+        100% {
+          transform: translateY(60px);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

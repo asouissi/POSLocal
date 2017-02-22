@@ -1,0 +1,70 @@
+--===============================================================================================
+--1. Add actors with the POS interface, put the color in the name
+-- Dealership Black
+-- Dealership Blue
+-- Dealership Green
+-- Dealership Jade
+-- Dealership Purple
+-- Dealership Yellow
+-- To check , run : select * from acteur where actlibcourt like 'Dealership%';
+-- Check also that in ACTNOM, you have the color starting with uppercase. In fact, the insertion
+-- in utiactdefault is based on it, to avoid fetching the actid manually
+--===============================================================================================
+
+--===============================================================================================
+--2. Insert new brands on table TUSPARAM and on LANTUSPARAM
+--===============================================================================================
+
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Purple', 1);
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Jade', 1);
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Green', 1);
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Blue', 1);
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Yellow', 1);
+INSERT INTO TUSPARAM (TUSNOM, TUPCODE, TUPFLAGORFI) VALUES ('SALESNETWORK', 'Brand Black', 1);
+
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Purple', 'EN', 'Brand Purple');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Jade', 'EN', 'Brand Jade');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Green', 'EN', 'Brand Green');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Blue', 'EN', 'Brand Blue');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Yellow', 'EN', 'Brand Yellow');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Black', 'EN', 'Brand Black');
+
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Purple', 'FR', 'Marque Violette');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Green', 'FR', 'Marque Verte');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Jade', 'FR', 'Marque Jade');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Blue', 'FR', 'Marque Bleue');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Yellow', 'FR', 'Marque Jaune');
+INSERT INTO LANTUSPARAM (TUSNOM, TUPCODE, LANCODE, TUPLIBELLE) VALUES ('SALESNETWORK', 'Brand Black', 'FR', 'Marque Noire');
+
+--===============================================================================================
+--3. Insert dealership/brand relation to the user on the table UTIACTDEFAULT
+--===============================================================================================
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Purple'),'APPORT','Brand Purple','APPORTMARQUE');
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Jade'),'APPORT','Brand Jade','APPORTMARQUE');
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Yellow'),'APPORT','Brand Yellow','APPORTMARQUE');
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Blue'),'APPORT','Brand Blue','APPORTMARQUE');
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Green'),'APPORT','Brand Green','APPORTMARQUE');
+INSERT INTO UTIACTDEFAULT (UTICODE,UADORDRE, ACTID,ROLCODE,UADSALESNETWORK,UADLINKTYPE) VALUES ('DEALER1',(select 1+MAX(UADORDRE) from utiactdefault where uticode='DEALER1'),(select ACTID from ACTEUR where ACTNOM='Black'),'APPORT','Brand Black','APPORTMARQUE');
+
+--===============================================================================================
+--4. Insert brand/skin relation on the table SALESNETWORKPREFERENCES
+--===============================================================================================
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Purple', 'skin-purple');
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Jade', 'skin-jade');
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Green', 'skin-green');
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Blue', 'skin-blue');
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Yellow', 'skin-yellow');
+INSERT INTO SALESNETWORKPREFERENCES (UADSALESNETWORK, SNPPOSSKIN) VALUES ('Brand Black', 'skin-black');
+
+--===============================================================================================
+--. Check if exists TRECODE = BRANDDEALERS in table TRELATION, itherwise add it
+--  (needed for segreation)
+--===============================================================================================
+INSERT INTO TRELATION (TRECODE, TREFLAGORFI, TREFLAGQP) VALUES ('BRANDDEALERS', 0, 0);
+
+--===============================================================================================
+--. INSERT VALUE FOR SALESNETWORK MODE (No dropdown , 1 dropdown or two dropdowns
+--===============================================================================================
+INSERT INTO TOPTION (TOPTABLE) VALUES ('SALESNETWORK');
+
+INSERT INTO TOPPARAM (TOPTABLE, TPAPARAM, UGECODE, TPANOMBRE, TPATEXTE) VALUES ('SALESNETWORK', 'NETWORKSELECTIONSTEP', '_ORIG_', '1', '1');

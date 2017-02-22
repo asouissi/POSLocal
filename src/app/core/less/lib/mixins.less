@@ -1,0 +1,666 @@
+//AdminLTE mixins
+//===============
+
+//Changes the color and the hovering properties of the navbar
+.navbar-variant(@color; @font-color: rgba(255, 255, 255, 0.8); @hover-color: #f6f6f6; @hover-bg: rgba(0, 0, 0, 0.1)) {
+  background-color: @color;
+  //Navbar links
+  .nav > li > a {
+    color: @font-color;
+  }
+
+  .nav > li > a:hover,
+  .nav > li > a:active,
+  .nav > li > a:focus,
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus,
+  .nav > .active > a {
+    background: @hover-bg;
+    color: @hover-color;
+  }
+
+  //Add color to the sidebar toggle button
+  .sidebar-toggle {
+    color: @font-color;
+    &:hover {
+      color: @hover-color;
+      background: @hover-bg;
+    }
+  }
+}
+
+.navbar-variant-cass(@color; @font-color; @hover-bg; @hover-color: #f6f6f6;) {
+  background-color: @color;
+  //Navbar links
+  .nav > li > a {
+    color: @font-color;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav > li > a:hover,
+  .nav > li > a:active,
+  .nav > li > a:focus,
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus,
+  .nav > .active > a {
+    background: @hover-bg;
+    color: @color;
+  }
+
+  //Add color to the sidebar toggle button
+  .sidebar-toggle {
+    color: @font-color;
+    &:hover {
+      color: @color;
+      background: @hover-bg;
+    }
+  }
+}
+
+//Logo color variation
+.logo-variant(@bg-header; @color: #fff; @border-bottom-color: transparent; @border-bottom-width: 0) {
+  background-color: @bg-header;
+  color: @color;
+  border-bottom: @border-bottom-width solid @border-bottom-color;
+
+  &:hover {
+    background-color: darken(@bg-header, 1%);
+  }
+}
+
+.logo-variant-cass(@bg-header; @color; @border-bottom-color: transparent; @border-bottom-width: 0) {
+  background-color: @bg-header;
+  color: @color;
+  border-bottom: @border-bottom-width solid @border-bottom-color;
+
+  &:hover {
+    background-color: darken(@bg-header, 1%);
+  }
+}
+
+//Box solid color variantion creator
+.box-solid-variant(@color; @text-color: #fff) {
+  border: 1px solid @color;
+  > .box-header {
+    color: @text-color;
+    background: @color;
+    background-color: @color;
+    a,
+    .btn {
+      color: @text-color;
+    }
+  }
+}
+
+//Direct Chat Variant
+.direct-chat-variant(@bg-header; @color: #fff) {
+  .right > .direct-chat-text {
+    background: @bg-header;
+    border-color: @bg-header;
+    color: @color;
+    &:after,
+    &:before {
+      border-left-color: @bg-header;
+    }
+  }
+}
+
+//border radius creator
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+//Different radius each side
+.border-radius(@top-left;
+@top-right
+;
+@bottom-left
+;
+@bottom-right
+)
+{
+  border-top-left-radius: @top-left
+;
+  border-top-right-radius: @top-right
+;
+  border-bottom-right-radius: @bottom-right
+;
+  border-bottom-left-radius: @bottom-left
+;
+}
+
+//Gradient background
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+  left bottom,
+  left top,
+  color-stop(0, @start),
+  color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+  @start,
+  @stop);
+  background: -moz-linear-gradient(center bottom,
+  @start 0%,
+  @stop 100%);
+  background: -o-linear-gradient(@stop,
+  @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stop, @start));
+}
+
+//Added 2.1.0
+//Skins Mixins
+
+//Dark Sidebar Mixin
+.skin-dark-sidebar(@link-hover-border-color) {
+  // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+  .wrapper,
+  .main-sidebar,
+  .left-side {
+    background-color: @sidebar-dark-bg;
+  }
+  //User Panel (resides in the sidebar)
+  .user-panel {
+    > .info, > .info > a {
+      color: #fff;
+    }
+  }
+  //Sidebar Menu. First level links
+  .sidebar-menu > li {
+    //Section Headning
+    &.header {
+      color: lighten(@sidebar-dark-bg, 20%);
+      background: darken(@sidebar-dark-bg, 4%);
+    }
+    //links
+    > a {
+      border-left: 3px solid transparent;
+    }
+    //Hover and active states
+    &:hover > a, &.active > a {
+      color: @sidebar-dark-hover-color;
+      background: @sidebar-dark-hover-bg;
+      border-left-color: @link-hover-border-color;
+    }
+    //First Level Submenu
+    > .treeview-menu {
+      margin: 0 1px;
+      background: @sidebar-dark-submenu-bg;
+    }
+  }
+  //All links within the sidebar menu
+  .sidebar a {
+    color: @sidebar-dark-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  //All submenus
+  .treeview-menu {
+    > li {
+      > a {
+        color: @sidebar-dark-submenu-color;
+      }
+      &.active > a, > a:hover {
+        color: @sidebar-dark-submenu-hover-color;
+      }
+    }
+  }
+  //The sidebar search form
+  .sidebar-form {
+    .border-radius(3px);
+    border: 1px solid lighten(@sidebar-dark-bg, 10%);
+    margin: 10px 10px;
+    input[type="text"], .btn {
+      box-shadow: none;
+      background-color: lighten(@sidebar-dark-bg, 10%);
+      border: 1px solid transparent;
+      height: 35px;
+      .transition(all @transition-speed @transition-fn);
+    }
+    input[type="text"] {
+      color: #666;
+      .border-radius(2px, 0, 2px, 0);
+      &:focus, &:focus + .input-group-btn .btn {
+        background-color: #fff;
+        color: #666;
+      }
+      &:focus + .input-group-btn .btn {
+        border-left-color: #fff;
+      }
+    }
+    .btn {
+      color: #999;
+      .border-radius(0, 2px, 0, 2px);
+    }
+  }
+}
+
+//Light Sidebar Mixin
+.skin-light-sidebar(@icon-active-color) {
+  // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+  .wrapper,
+  .main-sidebar,
+  .left-side {
+    background-color: @sidebar-light-bg;
+  }
+  .content-wrapper,
+  .main-footer {
+    border-left: 1px solid @gray;
+  }
+  //User Panel (resides in the sidebar)
+  .user-panel {
+    > .info, > .info > a {
+      color: @sidebar-light-color;
+    }
+  }
+  //Sidebar Menu. First level links
+  .sidebar-menu > li {
+    .transition(border-left-color .3s ease);
+    //border-left: 3px solid transparent;
+    //Section Headning
+    &.header {
+      color: lighten(@sidebar-light-color, 25%);
+      background: @sidebar-light-bg;
+    }
+    //links
+    > a {
+      border-left: 3px solid transparent;
+      font-weight: 600;
+    }
+    //Hover and active states
+    &:hover > a,
+    &.active > a {
+      color: @sidebar-light-hover-color;
+      background: @sidebar-light-hover-bg;
+    }
+    &:hover > a {
+
+    }
+    &.active {
+      border-left-color: @icon-active-color;
+      > a {
+        font-weight: 600;
+      }
+    }
+    //First Level Submenu
+    > .treeview-menu {
+      background: @sidebar-light-submenu-bg;
+    }
+  }
+  //All links within the sidebar menu
+  .sidebar a {
+    color: @sidebar-light-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  //All submenus
+  .treeview-menu {
+    > li {
+      > a {
+        color: @sidebar-light-submenu-color;
+      }
+      &.active > a,
+      > a:hover {
+        color: @sidebar-light-submenu-hover-color;
+      }
+      &.active > a {
+        font-weight: 600;
+      }
+    }
+  }
+  //The sidebar search form
+  .sidebar-form {
+    .border-radius(3px);
+    border: 1px solid @gray; //darken(@sidebar-light-bg, 5%);
+    margin: 10px 10px;
+    input[type="text"],
+    .btn {
+      box-shadow: none;
+      background-color: #fff; //darken(@sidebar-light-bg, 3%);
+      border: 1px solid transparent;
+      height: 35px;
+      .transition(all @transition-speed @transition-fn);
+    }
+    input[type="text"] {
+      color: #666;
+      .border-radius(2px, 0, 2px, 0);
+      &:focus,
+      &:focus + .input-group-btn .btn {
+        background-color: #fff;
+        color: #666;
+      }
+      &:focus + .input-group-btn .btn {
+        border-left-color: #fff;
+      }
+    }
+    .btn {
+      color: #999;
+      .border-radius(0, 2px, 0, 2px);
+    }
+  }
+  @media (min-width: @screen-sm-min) {
+    &.sidebar-mini.sidebar-collapse {
+      .sidebar-menu > li > .treeview-menu {
+        border-left: 1px solid @gray;
+      }
+    }
+  }
+}
+
+.common-skin-style(
+  @primary-color,
+  @secondary-color: @light-blue,
+  @bg-header: @primary-color,
+  @bg-header-hover: darken(@bg-header, 5%),
+  @header-font-color: #fff,
+  @use-header-separator: false,
+  @color-header-separator: @secondary-color,
+  @height-header-separator: 4px,
+  @use-light-version: false,
+  @bg-timeline-li: @primary-color,
+  @bg-body: #F1F1F1,
+  @bg-progtrckr: @primary-color
+) {
+  .f(); // used for conditions
+
+  //Layout
+  background-color: @bg-body;
+
+  .bg-logo, .bg-navbar {
+    background-color: @bg-header;
+  }
+
+  .bg-sidebar {
+    background-color: @sidebar-dark-bg;
+  }
+
+  .bg-content{
+    background-color: @bg-body;
+  }
+
+  @height-left-side: "100% - 50px";
+
+  .f() when (@use-header-separator) {
+    .main-header {
+      border-bottom: @height-header-separator solid @color-header-separator;
+    }
+
+    .content-wrapper,
+    .right-side {
+      height: ~"calc(@{height-left-side} - @{height-header-separator})";
+    }
+  }
+
+  .f() when not (@use-header-separator) {
+    .content-wrapper,
+    .right-side {
+      height: ~"calc(@{height-left-side})";
+    }
+  }
+
+  .main-header {
+    .navbar {
+      .navbar-variant (@bg-header, @font-color: @header-font-color, @hover-bg: @bg-header-hover);
+      .sidebar-toggle {
+        &:hover {
+          background-color: @bg-header-hover;
+        }
+      }
+
+      @media (max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            a:hover {
+              background: @bg-header-hover;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      .logo-variant (@bg-header, @header-font-color);
+    }
+
+    li.user-header {
+      background-color: @bg-header;
+      i, p {
+        color: @header-font-color !important;
+      }
+    }
+  }
+
+  //Global
+
+  .overlay > .fa {
+    color: @primary-color !important;
+  }
+
+  .toast-notification .success {
+    background-color: @secondary-color !important;
+  }
+
+  .content-header {
+    background: transparent;
+  }
+
+  // Components
+
+  .newDeal, .newDeal2, .portalQuote {
+    ol.progtrckr li {
+      &::after {
+        background: @bg-progtrckr;
+      }
+      > span {
+        &::after {
+          border-color: @bg-progtrckr;
+        }
+      }
+
+      &.progtrckr-doing,
+      &.progtrckr-done {
+        &::before {
+          background: @bg-progtrckr !important;
+        }
+      }
+    }
+  }
+
+  .rc-slider{
+    .rc-slider-handle{
+      border-color: @secondary-color;
+    }
+    .rc-slider-track {
+      background-color: lighten(@secondary-color, 20%);
+    }
+  }
+
+  // Others
+
+  .f() when (@use-light-version) {
+    .skin-light-sidebar(@primary-color);
+  }
+
+  .f() when not (@use-light-version) {
+    .skin-dark-sidebar(@primary-color);
+  }
+
+  .box.box-primary {
+    border-top-color: @secondary-color;
+  }
+
+  .nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: @secondary-color;
+  }
+
+  .timeline {
+
+    > .time-label > span, > li > .fa {
+      background-color: @bg-timeline-li;
+    }
+    a {
+      color: @secondary-color;
+    }
+  }
+
+  .is-focused > .Select-control {
+    border-color: @primary-color;
+  }
+
+  .form-control:focus {
+    border-color: @primary-color;
+  }
+
+  .input-calendar {
+
+    .cell:not(.disabled).current {
+      background-color: @secondary-color;
+    }
+
+    .cell:not(.disabled):hover {
+      border-color: @secondary-color;
+      color: @primary-color;
+    }
+
+    .cell.day.today:after {
+      color: red;
+    }
+
+    .navigation-title:hover,
+    .icon:hover,
+    .today-btn:not(.disabled):hover,
+    .icon-wrapper:hover {
+      color: @primary-color;
+    }
+  }
+
+  .list-group-item.active {
+    background-color: @primary-color;
+    border-color: darken(@primary-color, 5%);
+    &:hover, &:active, &.hover {
+      background-color: darken(@primary-color, 5%);
+    }
+  }
+
+  .summary .summary-tools .btn {
+    color: @secondary-color;
+  }
+
+  // btn colors
+
+  .btn-icon, .btn-group {
+    color: @primary-color;
+    a:hover {
+      color: @primary-color;
+    }
+    .glyphicon-remove-circle {
+      color: red;
+
+    }
+  }
+
+  //Charts
+
+  .contact-list {
+    .username {
+      color: @secondary-color;
+    }
+    a {
+      color: @primary-color;
+    }
+  }
+
+  .dashboardbloglist {
+    h3, a {
+      color: @secondary-color;
+    }
+  }
+
+}
+
+.common-skin-chart-colors(@colors...) {
+  &.chart-color-scheme {
+    display: none;
+
+    .loop(@counter) when (@counter > 0) {
+      .loop((@counter - 1)); // next iteration
+      .color-@{counter} {
+        background-color: extract(@colors, @counter); // code for each iteration
+      }
+    }
+    .loop(length(@colors));
+  }
+}
+
+.common-skin-kpi-colors(@colors...) {
+  .kpi-item {
+
+    .loop(@counter) when (@counter > 0) {
+      .loop((@counter - 1)); // next iteration
+      &.color-@{counter} {
+        background-color: extract(@colors, @counter); // code for each iteration
+      }
+    }
+    .loop(length(@colors));
+  }
+}
+
+/* Prototype for Bootstrap colors
+ @default: #fff, @primary: #337ab7, @success: #5cb85c, @info: #5bc0de, @warning: #f0ad4e, @danger: #d9534f
+*/
+
+/* Prototype for Cassiopae colors
+ default: #f4f4f4, @primary: #6baed6, @success: #5cb85c, @info: #00c0ef, @warning: #f39c12, @danger: #dd4b39
+*/
+
+.common-skin-buttons(
+  @default: #f4f4f4, @color-default: #000,
+  @primary: #6baed6, @color-primary: #fff,
+  @success: #5cb85c, @color-success: @color-primary,
+  @info: #00c0ef, @color-info: @color-primary,
+  @warning: #f39c12, @color-warning: @color-primary,
+  @danger: #dd4b39, @color-danger: @color-primary
+) {
+  @list-buttons: default, primary, success, info, warning, danger;
+
+  .loop(@counter) when (@counter > 0) {
+    .loop((@counter - 1)); // next iteration
+    @btn-type: extract(@list-buttons, @counter);
+    @color: "color-@{btn-type}";
+    .btn-@{btn-type} {
+      background-color: @@btn-type; // code for each iteration
+      border: 1px solid darken(@@btn-type, 5%);
+      color: @@color;
+      &:hover, &:active, &.hover {
+        background-color: darken(@@btn-type, 5%);
+      }
+    }
+  }
+  .loop(length(@list-buttons));
+  .btn-default {
+    border-color: #ddd;
+  }
+}
+
+//deprecated
+.common-skin-style2(@color) {
+
+  .btn.btn-success {
+    background-color: @color;
+    &:hover, &:active, &:focus, &:target {
+      background-color: @color;
+    }
+    &:active:focus {
+      outline: none !important;
+    }
+    color: white !important;
+  }
+}

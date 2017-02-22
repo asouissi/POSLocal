@@ -1,0 +1,10 @@
+{
+  "core.main.dashboard": "Dashboard",
+
+  "pos.attach.pdf.meta.creationDate": "Creation date",
+  "pos.attach.pdf.meta.modificationDate": "Modification date",
+  "pos.attach.pdf.meta.producer": "Producer",
+  "pos.attach.pdf.meta.title": "Title",
+  "pos.attach.pdf.meta.author": "Author",
+  "pos.attach.pdf.meta.creator": "Creator"
+}

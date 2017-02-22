@@ -1,0 +1,14 @@
+/*
+ * Skin: cass
+ * -----------
+ */
+.skin-cass {
+  @cass-color1: rgb(0, 93, 171); // blue Cassiopae
+  @cass-color2: rgb(86, 133, 200);
+
+  .common-skin-style(@cass-color1, @cass-color2, @use-header-separator: true, @bg-body: transparent);
+
+  .common-skin-chart-colors(@cass-color1, rgb(86, 133, 200), rgb(173, 216, 230), #26B0A6, #00665F);
+
+  //.common-skin-kpi-colors(green, blue, red, orange); // will make color-1 green for pki, color-2 blue, etc
+}

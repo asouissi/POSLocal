@@ -1,0 +1,47 @@
+.newDeal .attachments {
+  .table td {
+    vertical-align: middle;
+  }
+}
+
+.attachments {
+  .table {
+    span[class^='fa-'], span[class*=' fa-'] {
+      font-size: 24px;
+    }
+  }
+  .btn-icon {
+    span {
+      left: -55px;
+      top: 10px;
+    }
+    @media (min-width: @screen-xs-max) {
+      &:hover {
+        span {
+          opacity: 1;
+          transform: translateX(-105px);
+        }
+      }
+    }
+    @media (max-width: @screen-sm-max) {
+      span {
+        display: none;
+      }
+    }
+    .fa{
+      position: relative;
+    }
+  }
+
+}
+
+.gi-paddR {
+  padding-right: 1em;
+}
+.gi-paddL {
+  padding-left: 1em;
+}
+
+.alignRight {
+  float: right;
+}

@@ -1,0 +1,35 @@
+(function () {
+    var back = "http://back.cassiopae.com/CassiopaeBOWSL1";
+    var front = "https://front.cassiopae.com/FrontV4FOINNO1"
+
+    var apis = {
+
+        master: {
+            hostname: front,
+            api:  front +"/RestServices",
+            reCaptchaSiteKey: "6LfGcAwUAAAAAP-F-oIoN_yf2SjjcZTkSpT6VJwH",
+            reCaptchaSecretKey: "6LfGcAwUAAAAAM_d9lzVdXXifH3bm9_2kCFNNnxn",
+            security: true,
+            //refTableApi: "/referencetable", //not mandatory
+            //loginApi: "/login" //not mandatory
+        },
+
+        //ksiopBack: {
+        //security: true,
+        //    hostname: back,
+        //    api:  back +"/RestServices",
+        //}
+    }
+
+
+    window.cassioPosConfig = {
+        hostname: apis.master.hostname,
+        apis: apis,
+        masterApi : 'master' //api which manage session and userconfiguration
+        //,loginLogoImg : 'img/login/VWLogo.png', //allow to switch login page logo or replace img/login/logo_login.png
+        //loginBackgroundImg : 'img/login/bg_login.jpg', //allow to switch background image or replace img/login/bg_login.png
+        //loginBackgroundColor : '#a8adb3' // allow to override background by a color
+    };
+
+})();
+//rename as config.js

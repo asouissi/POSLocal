@@ -1,0 +1,294 @@
+.quote-tab {
+
+  position: absolute;
+  left: 15px;
+  display: block;
+
+  .btn-quote-index {
+    //font-weight: bold;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    position: relative;
+    margin-bottom: 5px;
+    left : 0px;
+  }
+
+  :last-child {
+    margin-left: 5px;
+  }
+}
+
+.action-label {
+  text-align: right;
+  display: block;
+  color: @red;
+}
+
+.btn-no-inline {
+  display: block;
+}
+
+.btn-group-nofloat {
+  float: none;
+
+  > .btn {
+    float: none;
+  }
+}
+
+.newDeal2 {
+  .btn-promote-to-deal {
+    @media (max-width: @screen-sm-max) {
+      top: -33px;
+    }
+  }
+}
+.btn-promote-to-deal {
+  button {
+    margin-left: 5px;
+  }
+  position: absolute;
+  right: 15px;
+  display: block;
+
+}
+
+.financialQuote2 {
+  @media (max-width: @screen-sm-max) {
+    margin-top: 20px;
+  }
+}
+
+.btn-new-asset {
+  float: right;
+  margin: 26px 0 0 0;
+  @media (max-width: @screen-sm-max) {
+    margin: 20px 0 10px 0;
+  }
+}
+
+input.verified{
+  color: green !important;
+}
+
+input.mismatch{
+  color: red !important;
+}
+
+// NEW DEAL
+
+.newDeal2 {
+  position: relative;
+
+  .waiting-glass-pane {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  ol.progtrckr {
+    padding-left: 3%;
+
+    li {
+      width: 25%;
+      padding: 0;
+      position: relative;
+      text-align: left;
+
+      @iterations: 4;
+
+      .mixin-loop (@i) when (@i > 0) {
+        &:nth-child(@{i})::before {
+          @timing: @i * 0.3;
+          animation: ~"stepsAppear 0.8s @{timing}s ease-in-out forwards";
+        }
+        .mixin-loop(@i - 1);
+      }
+
+      .mixin-loop(@iterations);
+
+      &::before {
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        bottom: -35px;
+        opacity: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        max-width: 0;
+        background: @light-blue;
+        transition: all 0.4s ease-in-out;
+        z-index: 1;
+      }
+
+      > span {
+        font-size: 15px;
+        display: block;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          width: 100%;
+          background: #C0C0C0;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.6em;
+          height: 1.6em;
+          border-radius: 1.6em;
+          border: 1px solid @light-blue;
+          display: none;
+          left: -3.3px;
+          bottom: -10px
+        }
+
+        //span {
+        // // position: relative;
+        //  top: -7px;
+        //}
+      }
+
+      &:first-child {
+        text-align: left;
+
+        &::before {
+          left: -1px;
+          text-align: center;
+        }
+
+        > span {
+          &::after {
+            left: -5px;
+          }
+
+          span {
+            left: -35px;
+          }
+        }
+      }
+
+      &:first-child + li {
+        &::before {
+          left: 0;
+        }
+
+        > span {
+          span {
+            left: -39px;
+          }
+        }
+      }
+
+      &:first-child + li + li {
+        &::before {
+          left: 0;
+        }
+
+        > span {
+          span {
+            left: -62px;
+          }
+        }
+      }
+
+      &:last-child {
+
+
+        &::before {
+          left: 0;
+          top: 33px;
+          text-align: center;
+        }
+
+        > span {
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            bottom: -10px;
+          }
+
+          span {
+            left: -90px;
+          }
+        }
+
+        &.progtrckr-doing {
+          position: relative;
+
+          &::before {
+            top: 35px;
+          }
+        }
+      }
+
+      &.progtrckr-done,
+      &.progtrckr-todo,
+      &.progtrckr-doing {
+        border-bottom: none;
+
+        &:hover::before {
+          color: #222D32;
+        }
+      }
+
+      &.progtrckr-doing {
+        &::before {
+          transform: scale(1.5);
+          background: @light-blue;
+        }
+
+        &:first-child {
+          &::before {
+            transform: scale(1.5);
+          }
+
+          & > span::after {
+            animation: infiniteCircle 1s 0.8s ease-in-out infinite;
+          }
+        }
+
+        > span::after {
+          display: block;
+          animation: infiniteCircle 1s ease-in-out infinite;
+        }
+      }
+
+      &.progtrckr-done {
+        &::before {
+          transform: scale(1);
+          background: @light-blue;
+        }
+
+        &:first-child::before {
+          transform: scale(1);
+        }
+
+        &::after {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .form-control {
+    color: #222d32;
+  }
+}
+
+

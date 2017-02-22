@@ -1,0 +1,383 @@
+.btn {
+  .fa-rotate-left,
+  .fa-rotate-right,
+  .fa-close {
+    transition: transform 500ms;
+    transform: rotate(0deg);
+  }
+
+  &:hover .fa-rotate-right,
+  &:hover .fa-close {
+    transform: rotate(90deg);
+  }
+
+  &:hover .fa-rotate-left {
+    transform: rotate(-90deg);
+  }
+}
+
+.attachments-container {
+
+  .dropdownInside {
+    text-overflow: ellipsis;
+    max-width: 190px;
+  }
+  .box-footer {
+    padding-bottom: 0;
+  }
+
+  .upload-button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    SPAN {
+      margin-right: 10px;
+    }
+
+    .fa {
+      vertical-align: middle;
+    }
+  }
+  .capture-button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    SPAN {
+      margin-right: 10px;
+    }
+
+    .fa {
+      vertical-align: middle;
+    }
+  }
+
+  .attachIcon,
+  .removeIcon {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+}
+
+.attachments-pdf-modal {
+  .attachments-pdf-grid {
+    width: 100%;
+  }
+
+  .modal-content {
+    overflow-x: hidden;
+  }
+
+  .caption {
+    text-align: center;
+  }
+
+  .pdf-modal-header-button {
+    border: none;
+  }
+
+  .thumbnail {
+    min-width: 200px;
+
+    SELECT {
+      max-width: 100%;
+    }
+
+    .zoom {
+      text-align: center;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      background-color: transparent;
+      min-width: 200px;
+      min-height: 200px;
+      position: relative;
+      overflow-x: hidden;
+
+      .imgLoading {
+        position: absolute;
+        color: #888;
+        left: 50%;
+        top: 50%;
+        margin-left: -18px;
+        margin-top: -14px;
+      }
+
+      .centered {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: opacity 200ms ease-in-out;
+
+        .fa {
+          color: black;
+          font-size: 100px;
+        }
+      }
+    }
+
+    .zoom:hover .centered {
+      opacity: 0.4;
+    }
+  }
+
+  .grid-container,
+  .carousel-container {
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    flex-direction: row;
+  }
+
+  .infos-right-panel {
+    flex-grow: 0;
+    min-width: 250px;
+    max-width: 250px;
+    width: auto;
+    transition: margin 500ms;
+    position: relative;
+    margin: 0;
+    overflow-y: auto;
+
+    .panel-heading {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+
+      H3 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .infos-right-panel-closed {
+    margin-right: -270px;
+  }
+
+  .carouselImg {
+    margin: 0 auto;
+    border: 2px solid #CCC;
+    border-radius: 8px;
+  }
+
+  .active .carouselImg {
+    transition: transform 500ms ease-in-out;
+  }
+
+  .carousel-control {
+    color: black;
+  }
+
+  .carousel-caption {
+    color: black;
+  }
+
+  .carousel-caption-glass,
+  .carousel-caption-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .carousel-caption-glass {
+    background-color: white;
+    opacity: 0.8;
+    z-index: 0;
+  }
+
+  .pdf-modal-header-button {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .uploadProgress {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .modal-dialog {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+
+    @media screen and (min-width: 768px) and (min-height: 600px) {
+      padding: 30px;
+    }
+  }
+
+  .footer-document-type {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+  .carousel-indicators {
+    display: inline-block;
+    position: static;
+    margin-left: auto;
+    width: auto;
+    padding: 10px 40px;
+  }
+}
+
+.attachments-pdf-page {
+  display: flex !important;
+  flex-direction: column;
+
+  .modal-lg {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .carousel-indicators {
+        .item {
+          border-color: black;
+        }
+
+        .active {
+          background-color: black;
+        }
+      }
+
+      .modal-body {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .carousel-indicators {
+          display: none;
+        }
+
+        .carousel {
+          flex-grow: 4;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .carousel-inner {
+            flex-grow: 1;
+            height: 100%;
+
+            .item {
+              width: 100%;
+              height: 100%;
+
+              .carouselImg {
+                // max-width: 100%;
+                // max-height: 100%;
+                // width: auto;
+                // height: auto;
+                position: absolute;
+                max-width: none;
+                max-height: none;
+              }
+
+              .carouselImgLoading {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -18px;
+                margin-top: -14px;
+                color: #888
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.photo-modal-dialog {
+  .upload-qrCode {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+  }
+  .modal-body {
+    min-height: 250px;
+  }
+  .photo-modal-header-button {
+    float: right;
+    margin-right: 8px;
+    border: none;
+  }
+
+  .webcam,
+  .canvasZone {
+    width: 100%;
+    height: 100%;
+  }
+  .modal-footer BUTTON .fa {
+    margin-left: 10px;
+  }
+
+  .modal-footer BUTTON {
+    .fa-refresh {
+      transition: transform 1000ms;
+      transform: rotate(0deg);
+    }
+
+    &:hover .fa-refresh {
+      transform: rotate(180deg);
+    }
+  }
+
+  .footer-document-type {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+  .canvasFlash {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+
+    z-index: 10;
+
+    opacity: 0;
+    animation: photo-fadein 2s ease;
+  }
+
+  @keyframes photo-fadein {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+.photo-modal-toggle .modal-dialog {
+  animation: photo-toggle 1s ease-in-out;
+
+  @keyframes photo-toggle {
+    0% {
+      transform: perspective(3000px) rotate3d(0, 0, 0, 90deg);
+    }
+
+    50% {
+      transform: perspective(3000px) rotate3d(0, -1, 0, 90deg);
+    }
+
+    100% {
+      transform: perspective(3000px) rotate3d(0, 0, 0, 90deg);
+    }
+  }
+}

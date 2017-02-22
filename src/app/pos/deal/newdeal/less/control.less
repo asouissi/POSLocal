@@ -1,0 +1,24 @@
+.control-table {
+  th, td {
+
+    &:nth-child(-n+2) {
+      width: 0px;
+    }
+  }
+  .warning{
+    color:@yellow;
+  }
+
+  .error{
+    color:@red;
+  }
+}
+
+.errors-table {
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}
+

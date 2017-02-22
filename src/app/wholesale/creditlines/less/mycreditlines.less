@@ -1,0 +1,80 @@
+.import-asset-btn,
+.asset-creation-btn {
+
+  span {
+    margin-left: 10px;
+  }
+}
+.disabled {
+  pointer-events: none;
+  .fa {
+    background-color: #CCC;
+  }
+}
+.credit-table {
+
+  th, td {
+    text-align: right;
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  th {
+    padding-right: 20px !important;
+  }
+
+}
+
+.credit-content {
+
+  .dashboard .chart .box-body CANVAS {
+    max-height: none;
+
+    //@media (max-width: @screen-xs-max) {
+    //  height: 350px !important;
+    //}
+  }
+
+  .box {
+    position: relative;
+
+    canvas {
+      display: block;
+      margin: auto;
+      width: 90% !important;
+      // height: 240px !important;
+    }
+
+    .loading-griddle {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      transition: all 0.6s ease-in-out;
+
+      & + .box-body {
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    .griddle {
+      height: 100%;
+      opacity: 1;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &.load {
+      .loading-griddle {
+        opacity: 1;
+      }
+
+      .griddle {
+        opacity: 1;
+      }
+    }
+  }
+}

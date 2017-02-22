@@ -1,0 +1,11 @@
+node_modules/*
+build/*
+src/www/bower_components/*
+src/www/config.js
+/.externalToolBuilders/
+/.settings/
+/.project
+/.tern-project
+/node_modules/
+/build/
+/.idea/

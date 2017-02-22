@@ -1,0 +1,4 @@
+.content-wrapper,
+.right-side {
+  height: calc(100% - 50px);
+}

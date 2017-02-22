@@ -1,0 +1,44 @@
+{
+  "PAV4_GENERIC_POS_DASHBOARD.GETDASHBOARDS.Dashboard1": "Painel de controle 1"
+  , "PAV4_GENERIC_POS_DASHBOARD.GETDASHBOARDS.Dashboard2": "Painel de controle 2"
+  , "PAV4_GENERIC_POS_DASHBOARD.GETDASHBOARDS.Manager": "Gerenciador"
+  , "PAV4_GENERIC_POS_DASHBOARD.GETDASHBOARDS.Manager2": "Gerenciador 2"
+  , "PAV4_GENERIC_POS_CHART.F_KPIDEALINPROGRESS.DealsInProgress": "Proposta em progesso"
+  , "PAV4_GENERIC_POS_CHART.F_KPICOMMISSION.CommissionThisMonth": "Comissão do mês"
+  , "PAV4_GENERIC_POS_CHART.F_KPIPROPOSALATTENTION.ProposalNeedYourAttention": "Proposta precisa de atenção"
+  , "PAV4_GENERIC_POS_CHART.F_KPIRENEGOCIATION.RenegociationRequests": "Pedido de renegociação"
+  , "PAV4_GENERIC_POS_CHART.F_PIVOTCHART.CurrentDeals": "Propostas atuais"
+  , "PAV4_GENERIC_POS_CHART.F_KPICONVERSIONRATE.ConversionRate": "Taxa de conversão"
+  , "PAV4_GENERIC_POS_CHART.F_KPIAPPROVALRATE.ApprovalRate": "Taxa de aprovação"
+  , "PAV4_GENERIC_POS_CHART.F_DEALINPROGRESS.ProposalStageAmountAsPercentageOfPipeline": "Quantidade de propostas como % do pipeline"
+  , "PAV4_GENERIC_POS_CHART.F_COMMISSIONPERMONTH.CommissionsPerMonth": "Comissões por mês"
+  , "PAV4_GENERIC_POS_CHART.F_COMMISSIONPERMONTH.Commissions": "Comissões"
+  , "PAV4_GENERIC_POS_CHART.F_SALESPERMONTHAREA.SalesPerMonthArea": "Venda por mês (área)"
+  , "PAV4_GENERIC_POS_CHART.F_SALESPERMONTHAREA.Sales": "Vendas"
+  , "PAV4_GENERIC_POS_CHART.F_SALESPERMONTH2.SalesPerMonth": "Vendas por mês"
+  , "PAV4_GENERIC_POS_CHART.F_UNITSPERMONTH.UnitsPerMonth": "Unidades por mês"
+  , "PAV4_GENERIC_POS_CHART.F_UNITSPERMONTH.Units": "Unidades"
+  , "PAV4_GENERIC_POS_CHART.F_SALESANDUNITSPERMONTH.SalesAndUnitsPerMonth": "Vendas das unidades por mês"
+  , "PAV4_GENERIC_POS_CHART.F_SALESANDUNITSPERMONTH.Sales": "Vendas"
+  , "PAV4_GENERIC_POS_CHART.F_SALESANDUNITSPERMONTH.Units": "Unidades"
+  , "PAV4_GENERIC_POS_CHART.F_PRICINGMATRIX.PricingMatrix": "Matriz de preço"
+  , "PAV4_GENERIC_POS_CHART.F_PRICINGMATRIX.KmYears": "km/ano"
+  , "PAV4_GENERIC_POS_CHART.F_PIVOT.TurnoverPerMonthAndStep": "Volume de negócios por mês"
+  , "PAV4_GENERIC_POS_CHART.F_PIVOT.Negociation": "Negciação"
+  , "PAV4_GENERIC_POS_CHART.F_PIVOT.Financial": "Financeiro"
+  , "PAV4_GENERIC_POS_CHART.F_PIVOT.Production": "Produção"
+  , "PAV4_GENERIC_POS_CHART.F_FLEETSTRUCTPERBRAND.TurnoverPerType": "Volume por tipo"
+  , "PAV4_GENERIC_POS_CHART.F_FLEETSTRUCTPERBRAND.LTL": "LTL"
+  , "PAV4_GENERIC_POS_CHART.F_FLEETSTRUCTPERBRAND.PS": "PS"
+  , "PAV4_GENERIC_POS_CHART.F_FLEETSTRUCTPERBRAND.Total": "Total"
+  , "PAV4_GENERIC_POS_CHART.F_CONTACTLIST.ContactList": "Lista de contatos",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.Numbers": "Numbers",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.NumbersSubTitle": "Statistics, overview",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.Charts": "Charts",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.ChartsSubtitle": "Commissions, sales, performance",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.Corporate": "Corporate",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.CorporateSubTitle": "News, contacts, planning",
+  "PAV4_GENERIC_POS_DASHBOARD.LAYOUT_EDITOR.MoveToDashboard": "Item to move to the dashboard:",
+  "PAV4_GENERIC_POS_CHART.F_PENETRETIONRATEAREA.PenetrationRate": "Penetration rate (chart)",
+  "PAV4_GENERIC_POS_CHART.F_PENETRETIONRATETABLE.PenetrationRate": "Penetration rate (grid)"
+}

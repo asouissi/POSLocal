@@ -1,0 +1,374 @@
+.formatted-currency,
+.formatted-integer,
+.formatted-number,
+.integer-entry,
+.number-entry,
+.currency-entry {
+  text-align: right;
+}
+
+.has-focus {
+  .integer-entry,
+  .number-entry,
+  .currency-entry {
+    text-align: left;
+  }
+}
+
+.integer-entry:focus,
+.number-entry:focus,
+.currency-entry:focus {
+  text-align: left;
+}
+
+.step-body{
+  position: relative;
+  z-index: 1;
+}
+.buttrckr {
+  min-height: 50px;
+  text-align: center;
+  @media (max-width: 480px) {
+    .btn {
+      float: right;
+    }
+
+    .btn-next, .btn-prev {
+      display: none;
+    }
+  }
+  .zone-left {
+    float: left;
+  }
+  .zone-right {
+    float: right;
+
+  }
+}
+
+.form-group.auto-complete {
+
+  .input-group {
+    width: 100%;
+    > div {
+
+      z-index: 12;
+      border: 1px solid #ddd;
+      opacity: 1;
+      padding: 5px;
+
+    }
+  }
+}
+
+.auto-complete {
+  &-item {
+    padding: 2px 2px 2px 13px;
+    background-color: white;
+
+  }
+
+  .highlight {
+    background: #cccccc;
+  }
+
+}
+
+.input-group-addon-but {
+  padding: 0;
+  border: 0;
+
+  > button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn-not-selected {
+    color: black;
+    background-color: white;
+    border-width: 1px 0;
+    border-color: #d2d6de;
+  }
+  .btn-not-selected[disabled],
+  .btn-not-selected[readonly] {
+    background-color: #eeeeee;
+  }
+}
+
+.percentOrCurrency {
+
+  .currency .btn-not-selected {
+    border-left-width: 1px;
+  }
+
+  .currency button {
+  }
+
+  &.leash {
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+
+      .input-group[class*="col-"] {
+        float: left;
+        min-width: 60px;
+      }
+    }
+
+    .percent button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &.unleash {
+    .row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+}
+
+.btn-unchecked {
+  color: black;
+  background-color: white;
+  border-width: 1px 0 1px 1px;
+  border-color: #d2d6de;
+
+  &[disabled],
+  &[readonly] {
+    background-color: #eeeeee;
+  }
+}
+
+.timeline {
+
+  .btn {
+    border-radius: 16px;
+  }
+
+  .add-time {
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+
+  .timeline-editor {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4px !important;
+    background-color: transparent;
+    border: none;
+  }
+
+  .timeline-editor:focus {
+    background-color: white;
+  }
+}
+
+.paymentTable {
+  .axeY {
+    width: 50px;
+  }
+
+  .month {
+    width: auto;
+  }
+
+  TH {
+    text-align: center;
+    padding-right: 4px;
+  }
+
+  TR TD:first-child {
+    text-align: right;
+    padding-right: 4px;
+  }
+
+  INPUT.number-entry {
+    padding: 2px 4px;
+  }
+}
+
+.input-calendar {
+  width: inherit !important;
+  //width: 100%;
+}
+
+.input-calendar-wrapper {
+  width: 220px !important;
+
+  &.icon-hidden {
+    top: @input-height-base;
+    left: 0;
+    z-index: 4;
+  }
+}
+
+.Select-control {
+  border-radius: 0;
+}
+
+.Select-menu-outer {
+  z-index: 10;
+}
+
+.kpi-item {
+  &-progress {
+    padding-right: 10px;
+    font-size: 38px;
+    text-align: center;
+  }
+}
+
+.form-group {
+  .is-focused > .Select-control {
+    border-color: @input-border-focus;
+    box-shadow: none;
+  }
+}
+
+.box-panel {
+  .box-header {
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  border-top: none;
+}
+
+.icon-circle {
+  background-color: @blue;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Select.form-control {
+  padding: 0;
+  .Select-control {
+    height: 32px;
+    border: none;
+  }
+  .Select-input {
+    height: 32px;
+  }
+}
+
+.form-control {
+  color: #222d32;
+}
+
+.modal-dialog {
+  .box-hideTitle {
+    border-color: transparent;
+    margin: 0;
+    border-width: 0;
+
+    + .box-body {
+      padding: 0;
+      border-width: 0;
+    }
+  }
+}
+
+.skin-item {
+  cursor: pointer;
+  float: left;
+  width: 70px;
+  padding: 5px;
+  height: 75px;
+  background: transparent !important;
+
+  .bg-logo {
+    width: 20%;
+    float: left;
+    height: 7px;
+  }
+  .bg-navbar {
+    width: 80%;
+    float: left;
+    height: 7px;
+  }
+  .bg-sidebar {
+    width: 20%;
+    float: left;
+    height: 20px;
+  }
+  .bg-content {
+    width: 80%;
+    float: left;
+    height: 20px;
+  }
+}
+
+.dashboard .chart .box-body CANVAS {
+  //max-height: 240px;
+}
+
+// Add margin to the left of the "View Details arrow'
+.dashboard .kpi-item .small-box-footer .fa {
+  margin-left: 8px;
+}
+
+.summary-offer-information {
+  dt:nth-of-type(2n+1),
+  dd:nth-of-type(2n+1) {
+    background-color: #f9f9f9;
+  }
+
+}
+
+.summary {
+  dl {
+    dt {
+      width: 55%;
+    }
+    dd {
+      margin-left: 60%;
+    }
+    div:nth-of-type(2n+1) {
+      dt, dd {
+        background-color: #f9f9f9;
+      }
+    }
+
+    .important {
+      font-weight: bold;
+    }
+
+    .number {
+      text-align: right;
+    }
+
+    UL {
+      padding: 0;
+    }
+
+    LI {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+// Add a style to make buttons with too large text more pretty
+button > span {
+  white-space: normal;
+}
+
+.calculator {
+  .calculator-form > .row {
+    margin-bottom: 40px;
+  }
+  .calculator-slider{
+    margin-bottom: 10px;
+  }
+}

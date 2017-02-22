@@ -1,0 +1,116 @@
+.my-deals-content {
+
+  i {
+    font-size: 20px !important;
+  }
+
+  .griddle-body {
+
+    .cell-dprnumero {
+      width: 100px;
+    }
+
+    .cell-dprnom {
+      width: 20%;
+    }
+
+    .cell-actnom {
+      width: 18%;
+    }
+
+    .cell-jalcode {
+      .badge {
+        max-width: 130px;
+      }
+      width: 110px;
+    }
+
+    .cell-dprdtmodif {
+      width: 110px;
+    }
+
+    .cell-pfiinvestissement {
+      width: 100px;
+    }
+
+    .cell-tpgcode {
+      width: 50px;
+    }
+  }
+
+  .deals-custom-row {
+    //padding: 10px 0px;
+    .mobile-badge {
+      width: 60px;
+      > div {
+        height: 50px;
+        width: 50px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+    }
+    .flex-row {
+      padding: 0px 5px
+    }
+
+    .flex-col {
+      &.col1 {
+        width: ~"calc(60% - 30px)";
+      }
+      &.col2 {
+        width: ~"calc(40% - 30px)";
+        text-align: right;
+      }
+    }
+  }
+
+  .my-deals-content {
+    .deals {
+      min-height: 565px;
+    }
+
+    .box {
+      position: relative;
+
+      canvas {
+        display: block;
+        margin: auto;
+        width: 90% !important;
+        height: auto !important;
+      }
+
+      .loading-griddle {
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.6s ease-in-out;
+
+        & + .box-body {
+          position: relative;
+          z-index: 5;
+        }
+      }
+
+      .griddle {
+        height: 100%;
+        opacity: 1;
+        transition: all 0.6s ease-in-out;
+      }
+
+      &.load {
+        .loading-griddle {
+          opacity: 1;
+        }
+
+        .griddle {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
